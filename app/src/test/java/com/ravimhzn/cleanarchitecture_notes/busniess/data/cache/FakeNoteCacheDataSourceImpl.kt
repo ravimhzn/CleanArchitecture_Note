@@ -104,7 +104,7 @@ constructor(
     }
 
     override suspend fun getNumNotes(): Int {
-        return notesData.size
+        return 10
     }
 
     override suspend fun insertNotes(notes: List<Note>): LongArray {
