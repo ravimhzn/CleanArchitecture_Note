@@ -1,9 +1,15 @@
+package dependencies
+
 object Versions {
     val gradle = "3.5.3"
+
+    //    val gradle = "3.6.1" //Latest version
     val compilesdk = 29
     val minsdk = 21
     val targetsdk = 29
     val kotlin = "1.3.61"
+
+    //    val kotlin = "1.3.72" //Latest Version
     val ktx = "1.2.0"
     val dagger = "2.25.4"
     val nav_components = "2.3.0-alpha06"

@@ -1,8 +1,7 @@
-package com.codingwithmitch.cleannotes.business.domain.state
+package com.ravimhzn.cleanarchitecture_notes.busniess.domain.state
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.codingwithmitch.cleannotes.util.EspressoIdlingResource
 
 /**
  * - Keeps track of active StateEvents in DataChannelManager
@@ -23,20 +22,20 @@ class StateEventManager {
     }
 
     fun clearActiveStateEventCounter(){
-        EspressoIdlingResource.clear()
+       // EspressoIdlingResource.clear()
         activeStateEvents.clear()
         syncNumActiveStateEvents()
     }
 
     fun addStateEvent(stateEvent: StateEvent){
-        EspressoIdlingResource.increment()
+      //  EspressoIdlingResource.increment()
         activeStateEvents.put(stateEvent.eventName(), stateEvent)
         syncNumActiveStateEvents()
     }
 
     fun removeStateEvent(stateEvent: StateEvent?){
         stateEvent?.let {
-            EspressoIdlingResource.decrement()
+           // EspressoIdlingResource.decrement()
         }
         activeStateEvents.remove(stateEvent?.eventName())
         syncNumActiveStateEvents()

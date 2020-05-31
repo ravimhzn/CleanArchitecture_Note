@@ -1,6 +1,6 @@
-package com.codingwithmitch.cleannotes.business.domain.state
+package com.ravimhzn.cleanarchitecture_notes.busniess.domain.state
 
-import com.codingwithmitch.cleannotes.util.printLogD
+import com.ravimhzn.cleanarchitecture_notes.utils.printLogD
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main

@@ -1,4 +1,4 @@
-package com.codingwithmitch.cleannotes.util
+package com.ravimhzn.cleanarchitecture_notes.utils
 
 object Constants {
 

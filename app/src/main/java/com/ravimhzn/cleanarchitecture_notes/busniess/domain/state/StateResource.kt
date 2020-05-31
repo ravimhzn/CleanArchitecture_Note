@@ -1,7 +1,7 @@
-package com.codingwithmitch.cleannotes.business.domain.state
+package com.ravimhzn.cleanarchitecture_notes.busniess.domain.state
 
 import android.view.View
-import com.codingwithmitch.cleannotes.util.TodoCallback
+import com.ravimhzn.cleanarchitecture_notes.utils.TodoCallback
 
 
 data class StateMessage(val response: Response)
@@ -12,37 +12,37 @@ data class Response(
     val messageType: MessageType
 )
 
-sealed class UIComponentType{
+sealed class UIComponentType {
 
-    class Toast: UIComponentType()
+    class Toast : UIComponentType()
 
-    class Dialog: UIComponentType()
+    class Dialog : UIComponentType()
 
     class AreYouSureDialog(
         val callback: AreYouSureCallback
-    ): UIComponentType()
+    ) : UIComponentType()
 
     class SnackBar(
         val undoCallback: SnackbarUndoCallback? = null,
         val onDismissCallback: TodoCallback? = null
-    ): UIComponentType()
+    ) : UIComponentType()
 
-    class None: UIComponentType()
+    class None : UIComponentType()
 }
 
-sealed class MessageType{
+sealed class MessageType {
 
-    class Success: MessageType()
+    class Success : MessageType()
 
-    class Error: MessageType()
+    class Error : MessageType()
 
-    class Info: MessageType()
+    class Info : MessageType()
 
-    class None: MessageType()
+    class None : MessageType()
 }
 
 
-interface StateMessageCallback{
+interface StateMessageCallback {
 
     fun removeMessageFromStack()
 }
@@ -61,9 +61,9 @@ interface SnackbarUndoCallback {
 }
 
 class SnackbarUndoListener
-    constructor(
-        private val snackbarUndoCallback: SnackbarUndoCallback?
-    ): View.OnClickListener {
+constructor(
+    private val snackbarUndoCallback: SnackbarUndoCallback?
+) : View.OnClickListener {
 
     override fun onClick(v: View?) {
         snackbarUndoCallback?.undo()

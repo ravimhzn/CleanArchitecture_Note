@@ -1,13 +1,12 @@
-package com.codingwithmitch.cleannotes.business.domain.state
-
+package com.ravimhzn.cleanarchitecture_notes.busniess.domain.state
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.codingwithmitch.cleannotes.util.printLogD
+import com.ravimhzn.cleanarchitecture_notes.utils.printLogD
 import kotlinx.android.parcel.IgnoredOnParcel
 import java.lang.IndexOutOfBoundsException
 
-const val MESSAGE_STACK_BUNDLE_KEY = "com.codingwithmitch.openapi.util.MessageStack"
+const val MESSAGE_STACK_BUNDLE_KEY = "com.ravimhzn.cleanarchitecture_notes.util.MessageStack"
 
 class MessageStack: ArrayList<StateMessage>() {
 

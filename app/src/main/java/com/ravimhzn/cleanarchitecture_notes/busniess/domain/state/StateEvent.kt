@@ -1,4 +1,4 @@
-package com.codingwithmitch.cleannotes.business.domain.state
+package com.ravimhzn.cleanarchitecture_notes.busniess.domain.state
 
 interface StateEvent {
 
