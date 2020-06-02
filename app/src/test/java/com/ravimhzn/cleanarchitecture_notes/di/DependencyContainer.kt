@@ -7,7 +7,7 @@ import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.NoteDataFactor
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.NoteFactory
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.util.DateUtil
 import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.data.cache.FakeNoteCacheDataSourceImpl
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.data.network.FakeNoteNetworkDataSourceImpl
+import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.FakeNoteNetworkDataSourceImpl
 import com.ravimhzn.cleanarchitecture_notes.utils.isUnitTest
 import java.text.SimpleDateFormat
 import java.util.*
