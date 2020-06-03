@@ -1,4 +1,4 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.interactors.common
+package com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.common
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.CacheResponseHandler
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.NoteCacheDataSource

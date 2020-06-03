@@ -1,7 +1,7 @@
 package com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.abstraction
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
-import com.ravimhzn.cleanarchitecture_notes.framework.datasource.database.NOTE_PAGINATION_PAGE_SIZE
+import com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.database.NOTE_PAGINATION_PAGE_SIZE
 
 interface NoteDaoService {
     suspend fun insertNote(note: Note): Long

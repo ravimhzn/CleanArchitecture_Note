@@ -1,14 +1,14 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist
+package com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist
 
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.data.cache.FORCE_GENERAL_FAILURE
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.data.cache.FORCE_NEW_NOTE_EXCEPTION
+import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist.data.cache.FORCE_GENERAL_FAILURE
+import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist.data.cache.FORCE_NEW_NOTE_EXCEPTION
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.CacheErrors
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.NoteCacheDataSource
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.abstraction.NoteNetworkDataSource
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.DataState
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.NoteFactory
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.InsertNewNote.Companion.INSERT_NOTE_FAILED
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.InsertNewNote.Companion.INSERT_NOTE_SUCCESS
+import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist.InsertNewNote.Companion.INSERT_NOTE_FAILED
+import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist.InsertNewNote.Companion.INSERT_NOTE_SUCCESS
 import com.ravimhzn.cleanarchitecture_notes.di.DependencyContainer
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListStateEvent
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListViewState

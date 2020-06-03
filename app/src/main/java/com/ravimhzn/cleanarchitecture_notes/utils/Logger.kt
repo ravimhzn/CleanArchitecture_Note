@@ -1,7 +1,7 @@
 package com.ravimhzn.cleanarchitecture_notes.utils
 
 import android.util.Log
-import com.crashlytics.android.Crashlytics
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.ravimhzn.cleanarchitecture_notes.utils.Constants.DEBUG
 import com.ravimhzn.cleanarchitecture_notes.utils.Constants.TAG
 
@@ -18,8 +18,8 @@ fun printLogD(className: String?, message: String) {
 /*
     Priorities: Log.DEBUG, Log. etc....
  */
-fun cLog(priority: Int, tag: String, msg: String?) {
+fun cLog(msg: String?) {
     if (!DEBUG) {
-        Crashlytics.log(priority, tag, msg)
+        msg?.let { FirebaseCrashlytics.getInstance().log(it) }
     }
 }

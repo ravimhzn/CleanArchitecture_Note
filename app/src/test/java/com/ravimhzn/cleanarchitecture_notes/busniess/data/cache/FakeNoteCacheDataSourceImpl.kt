@@ -1,9 +1,9 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.data.cache
+package com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist.data.cache
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.NoteCacheDataSource
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.util.DateUtil
-import com.ravimhzn.cleanarchitecture_notes.framework.datasource.database.NOTE_PAGINATION_PAGE_SIZE
+import com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.database.NOTE_PAGINATION_PAGE_SIZE
 
 
 const val FORCE_DELETE_NOTE_EXCEPTION = "FORCE_DELETE_NOTE_EXCEPTION"

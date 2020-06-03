@@ -4,6 +4,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion Versions.compilesdk
@@ -62,7 +64,12 @@ dependencies {
     implementation Dependencies.ktx
     implementation Dependencies.kotlin_coroutines
     implementation Dependencies.kotlin_coroutines_android
-    implementation Dependencies.kotlin_coroutines_play_services
+    implementation Dependencies.kotlin_coroutines_play_services //Necessary for firebase network transaction
+
+    //Database
+    implementation Dependencies.room_ktx
+    implementation Dependencies.room_runtime
+    kapt AnnotationProcessing.room_compiler
 
     //Retrofit
     implementation Dependencies.retrofit

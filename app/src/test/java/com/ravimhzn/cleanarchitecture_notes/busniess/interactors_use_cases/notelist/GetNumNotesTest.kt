@@ -1,10 +1,10 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist
+package com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.NoteCacheDataSource
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.abstraction.NoteNetworkDataSource
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.NoteFactory
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.DataState
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.GetNumNotes.Companion.GET_NUM_NOTES_SUCCESS
+import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist.GetNumNotes.Companion.GET_NUM_NOTES_SUCCESS
 import com.ravimhzn.cleanarchitecture_notes.di.DependencyContainer
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListStateEvent
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListViewState

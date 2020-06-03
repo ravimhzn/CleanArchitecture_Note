@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "489761038251",
+    "firebase_url": "https://cleanarchtest-94729.firebaseio.com",
+    "project_id": "cleanarchtest-94729",
+    "storage_bucket": "cleanarchtest-94729.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489761038251:android:a37299f054a2a79961fcee",
+        "android_client_info": {
+          "package_name": "com.ravimhzn.cleanarchitecture_notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489761038251-ch2e9nt8f4r4hvdiiilr1cij6tvum4cg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWXXC31Akwx47hoqyfPZHVRs_TmIozFoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489761038251-ch2e9nt8f4r4hvdiiilr1cij6tvum4cg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

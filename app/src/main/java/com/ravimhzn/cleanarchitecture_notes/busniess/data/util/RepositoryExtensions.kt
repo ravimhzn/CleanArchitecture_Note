@@ -9,6 +9,7 @@ import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.NetworkConstan
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.NetworkErrors.NETWORK_ERROR_TIMEOUT
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.NetworkErrors.NETWORK_ERROR_UNKNOWN
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.util.GenericErrors.ERROR_UNKNOWN
+import com.ravimhzn.cleanarchitecture_notes.utils.cLog
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.withContext
@@ -32,6 +33,7 @@ suspend fun <T> safeApiCall(
             }
         } catch (throwable: Throwable) {
             throwable.printStackTrace()
+            cLog(throwable.message)
             when (throwable) {
                 is TimeoutCancellationException -> {
                     val code = 408 // timeout error code
@@ -71,6 +73,7 @@ suspend fun <T> safeCacheCall(
             }
         } catch (throwable: Throwable) {
             throwable.printStackTrace()
+            cLog(throwable.message)
             when (throwable) {
 
                 is TimeoutCancellationException -> {

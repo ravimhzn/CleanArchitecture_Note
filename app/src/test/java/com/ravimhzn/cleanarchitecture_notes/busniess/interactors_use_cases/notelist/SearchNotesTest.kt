@@ -1,12 +1,12 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist
+package com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.NoteCacheDataSource
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.NoteFactory
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.DataState
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.SearchNotes.Companion.SEARCH_NOTES_SUCCESS
+import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist.SearchNotes.Companion.SEARCH_NOTES_SUCCESS
 import com.ravimhzn.cleanarchitecture_notes.di.DependencyContainer
-import com.ravimhzn.cleanarchitecture_notes.framework.datasource.database.ORDER_BY_ASC_DATE_UPDATED
+import com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.database.ORDER_BY_ASC_DATE_UPDATED
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListStateEvent.SearchNotesEvent
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListViewState
 import kotlinx.coroutines.InternalCoroutinesApi

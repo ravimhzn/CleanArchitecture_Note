@@ -1,4 +1,4 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.interactors.common
+package com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.common
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.CacheErrors.CACHE_ERROR_UNKNOWN
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.NoteCacheDataSource
@@ -6,9 +6,9 @@ import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.abstraction.No
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.NoteFactory
 import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.DataState
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.common.DeleteNote.Companion.DELETE_NOTE_FAILURE
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.common.DeleteNote.Companion.DELETE_NOTE_SUCCESS
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors.notelist.data.cache.FORCE_DELETE_NOTE_EXCEPTION
+import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.common.DeleteNote.Companion.DELETE_NOTE_FAILURE
+import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.common.DeleteNote.Companion.DELETE_NOTE_SUCCESS
+import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist.data.cache.FORCE_DELETE_NOTE_EXCEPTION
 import com.ravimhzn.cleanarchitecture_notes.di.DependencyContainer
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListStateEvent
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListViewState

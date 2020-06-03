@@ -6,7 +6,8 @@ object Dependencies {
     val ktx = "androidx.core:core-ktx:${Versions.ktx}"
     val kotlin_coroutines =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines_version}"
-    val kotlin_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines_version}"
+    val kotlin_coroutines_android =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines_version}"
     val kotlin_coroutines_play_services =
         "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:${Versions.coroutines_play_services}"
     val dagger = "com.google.dagger:dagger:${Versions.dagger}"
@@ -23,16 +24,19 @@ object Dependencies {
     val room_ktx = "androidx.room:room-ktx:${Versions.room}"
     val play_core = "com.google.android.play:core:${Versions.play_core}"
     val leak_canary = "com.squareup.leakcanary:leakcanary-android:${Versions.leak_canary}"
-    val firebase_firestore =
-        "com.google.firebase:firebase-firestore-ktx:${Versions.firebase_firestore}"
-    val firebase_auth = "com.google.firebase:firebase-auth:${Versions.firebase_auth}"
-    val firebase_analytics = "com.google.firebase:firebase-analytics:${Versions.firebase_analytics}"
-    val firebase_crashlytics =
-        "com.crashlytics.sdk.android:crashlytics:${Versions.firebase_crashlytics}"
+
     val lifecycle_runtime = "androidx.lifecycle:lifecycle-runtime:${Versions.lifecycle_version}"
     val lifecycle_coroutines =
         "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle_version}"
     val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit2_version}"
     val retrofit_gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit2_version}"
     val markdown_processor = "com.yydcdut:markdown-processor:${Versions.markdown_processor}"
+
+    //******************** FIREBASE *************** //
+    val firebase_firestore =
+        "com.google.firebase:firebase-firestore-ktx:${Versions.firebase_firestore}"
+    val firebase_auth = "com.google.firebase:firebase-auth:${Versions.firebase_auth}"
+    val firebase_analytics = "com.google.firebase:firebase-analytics:${Versions.firebase_analytics}"
+    val firebase_crashlytics =
+        "com.google.firebase:firebase-crashlytics:${Versions.firebase_crashlytics}"
 }
