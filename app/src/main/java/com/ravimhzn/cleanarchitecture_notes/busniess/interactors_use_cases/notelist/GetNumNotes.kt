@@ -3,7 +3,7 @@ package com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.note
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.CacheResponseHandler
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.NoteCacheDataSource
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.util.safeCacheCall
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.*
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.state.*
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListViewState
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.Flow

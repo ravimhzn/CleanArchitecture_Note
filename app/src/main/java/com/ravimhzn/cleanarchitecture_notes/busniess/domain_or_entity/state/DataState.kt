@@ -1,4 +1,4 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.domain.state
+package com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.state
 
 
 data class DataState<T>(

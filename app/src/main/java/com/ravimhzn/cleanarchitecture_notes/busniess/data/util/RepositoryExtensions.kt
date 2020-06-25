@@ -75,7 +75,6 @@ suspend fun <T> safeCacheCall(
             throwable.printStackTrace()
             cLog(throwable.message)
             when (throwable) {
-
                 is TimeoutCancellationException -> {
                     CacheResult.GenericError(CACHE_ERROR_TIMEOUT)
                 }
@@ -93,4 +92,5 @@ private fun convertErrorBody(throwable: HttpException): String? {
     } catch (exception: Exception) {
         ERROR_UNKNOWN
     }
+
 }

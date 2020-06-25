@@ -1,4 +1,4 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.domain.model
+package com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

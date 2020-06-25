@@ -1,7 +1,7 @@
 package com.ravimhzn.cleanarchitecture_notes.busniess.data.network
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.abstraction.NoteNetworkDataSource
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
 
 
 class FakeNoteNetworkDataSourceImpl

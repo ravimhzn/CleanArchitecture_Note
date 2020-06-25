@@ -1,6 +1,6 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.domain.model
+package com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model
 
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.util.DateUtil
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.util.DateUtil
 import java.util.*
 import javax.inject.Inject
 import javax.inject.Singleton

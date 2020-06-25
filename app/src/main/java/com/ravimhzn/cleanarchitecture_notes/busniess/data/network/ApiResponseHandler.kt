@@ -2,7 +2,7 @@ package com.ravimhzn.cleanarchitecture_notes.busniess.data.network
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.NetworkErrors.NETWORK_DATA_NULL
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.NetworkErrors.NETWORK_ERROR
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.*
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.state.*
 
 abstract class ApiResponseHandler<ViewState, Data>(
     private val response: ApiResult<Data?>,

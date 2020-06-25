@@ -1,7 +1,7 @@
 package com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.implementation
 
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.util.DateUtil
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.util.DateUtil
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.abstraction.NoteDaoService
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.database.NoteDao
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.database.returnOrderedQuery
@@ -27,7 +27,12 @@ class NoteDaoServiceImpl @Inject constructor(
         return noteDao.searchNoteById(primaryKey)?.let { noteCacheMapper.mapFromEntity(it) }
     }
 
-    override suspend fun updateNote(primary: String, newTitle: String, newBody: String?): Int {
+    override suspend fun updateNote(
+        primary: String,
+        newTitle: String,
+        newBody: String?,
+        timestamp: String?
+    ): Int {
         return noteDao.updateNote(
             primaryKey = primary,
             title = newTitle,
@@ -48,6 +53,12 @@ class NoteDaoServiceImpl @Inject constructor(
     override suspend fun searchNotes(): List<Note> {
         return noteCacheMapper.entityListToNoteList(
             noteDao.searchNotes()
+        )
+    }
+
+    override suspend fun getAllNotes(): List<Note> {
+        return noteCacheMapper.entityListToNoteList(
+            noteDao.getAllNotes()
         )
     }
 

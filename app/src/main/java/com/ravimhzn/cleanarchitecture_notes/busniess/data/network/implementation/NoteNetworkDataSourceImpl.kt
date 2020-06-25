@@ -1,7 +1,7 @@
 package com.ravimhzn.cleanarchitecture_notes.busniess.data.network.implementation
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.abstraction.NoteNetworkDataSource
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.network.abstraction.NoteFirestoreService
 import javax.inject.Inject
 import javax.inject.Singleton

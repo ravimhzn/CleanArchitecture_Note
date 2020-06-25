@@ -1,6 +1,6 @@
 package com.ravimhzn.cleanarchitecture_notes.busniess.data.network.abstraction
 
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
 
 interface NoteNetworkDataSource {
     suspend fun insertOrUpdateNote(note: Note)

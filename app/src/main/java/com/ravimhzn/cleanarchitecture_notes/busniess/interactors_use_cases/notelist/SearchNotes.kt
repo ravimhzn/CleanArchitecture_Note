@@ -3,8 +3,8 @@ package com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.note
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.CacheResponseHandler
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.NoteCacheDataSource
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.util.safeCacheCall
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.*
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.state.*
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListViewState
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.Flow
@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.flow
 class SearchNotes(
     private val noteCacheDataSource: NoteCacheDataSource
 ) {
+
     fun searchNotes(
         query: String,
         filterAndOrder: String,
@@ -20,9 +21,11 @@ class SearchNotes(
         stateEvent: StateEvent
     ): Flow<DataState<NoteListViewState>?> = flow {
         var updatedPage = page
+
         if (page <= 0) {
             updatedPage = 1
         }
+
         val cacheResult = safeCacheCall(IO) {
             noteCacheDataSource.searchNotes(
                 query = query,
@@ -38,7 +41,7 @@ class SearchNotes(
             override fun handleSuccess(resultObj: List<Note>): DataState<NoteListViewState> {
                 var message: String? = SEARCH_NOTES_SUCCESS
                 var uiComponentType: UIComponentType = UIComponentType.None()
-                if (resultObj.size == 0) {
+                if (resultObj.isEmpty()) {
                     message = SEARCH_NOTES_NO_MATCHIN_RESULTS
                     uiComponentType = UIComponentType.Toast()
                 }
@@ -55,8 +58,10 @@ class SearchNotes(
                 )
             }
         }.getResult()
+
         emit(response)
     }
+
 
     companion object {
         val SEARCH_NOTES_SUCCESS = "Successfully retrieved list of notes."

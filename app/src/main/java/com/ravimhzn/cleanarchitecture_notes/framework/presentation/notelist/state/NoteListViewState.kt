@@ -1,8 +1,8 @@
 package com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state
 
 import android.os.Parcelable
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.ViewState
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.state.ViewState
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

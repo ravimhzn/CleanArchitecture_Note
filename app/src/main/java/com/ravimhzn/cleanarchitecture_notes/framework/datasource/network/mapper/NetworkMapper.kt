@@ -1,8 +1,8 @@
 package com.ravimhzn.cleanarchitecture_notes.framework.datasource.network.mapper
 
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.util.DateUtil
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.util.EntityMapper
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.util.DateUtil
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.util.EntityMapper
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.network.model.NoteNetworkEntity
 import javax.inject.Inject
 

@@ -37,14 +37,16 @@ interface NoteDao {
     @Query("DELETE FROM notes")
     suspend fun deleteAllNotes()
 
-    @Query("""
+    @Query(
+        """
         UPDATE notes 
         SET 
         title = :title, 
         body = :body,
         updated_at = :updated_at
         WHERE id = :primaryKey
-        """)
+        """
+    )
     suspend fun updateNote(
         primaryKey: String,
         title: String,
@@ -58,48 +60,56 @@ interface NoteDao {
     @Query("SELECT * FROM notes")
     suspend fun searchNotes(): List<NoteCacheEntity>
 
-    @Query("""
+    @Query(
+        """
         SELECT * FROM notes 
         WHERE title LIKE '%' || :query || '%' 
         OR body LIKE '%' || :query || '%' 
         ORDER BY updated_at DESC LIMIT (:page * :pageSize)
-        """)
+        """
+    )
     suspend fun searchNotesOrderByDateDESC(
         query: String,
         page: Int,
         pageSize: Int = NOTE_PAGINATION_PAGE_SIZE
     ): List<NoteCacheEntity>
 
-    @Query("""
+    @Query(
+        """
         SELECT * FROM notes 
         WHERE title LIKE '%' || :query || '%' 
         OR body LIKE '%' || :query || '%' 
         ORDER BY updated_at ASC LIMIT (:page * :pageSize)
-        """)
+        """
+    )
     suspend fun searchNotesOrderByDateASC(
         query: String,
         page: Int,
         pageSize: Int = NOTE_PAGINATION_PAGE_SIZE
     ): List<NoteCacheEntity>
 
-    @Query("""
+    @Query(
+        """
         SELECT * FROM notes 
         WHERE title LIKE '%' || :query || '%' 
         OR body LIKE '%' || :query || '%' 
         ORDER BY title DESC LIMIT (:page * :pageSize)
-        """)
+        """
+    )
     suspend fun searchNotesOrderByTitleDESC(
         query: String,
         page: Int,
         pageSize: Int = NOTE_PAGINATION_PAGE_SIZE
     ): List<NoteCacheEntity>
 
-    @Query("""
+    @Query(
+        """
         SELECT * FROM notes 
         WHERE title LIKE '%' || :query || '%' 
         OR body LIKE '%' || :query || '%' 
         ORDER BY title ASC LIMIT (:page * :pageSize)
-        """)
+        """
+    )
     suspend fun searchNotesOrderByTitleASC(
         query: String,
         page: Int,
@@ -109,6 +119,9 @@ interface NoteDao {
 
     @Query("SELECT COUNT(*) FROM notes")
     suspend fun getNumNotes(): Int
+
+    @Query("Select * from notes")
+    suspend fun getAllNotes(): List<NoteCacheEntity>
 }
 
 
@@ -118,30 +131,34 @@ suspend fun NoteDao.returnOrderedQuery(
     page: Int
 ): List<NoteCacheEntity> {
 
-    when{
+    when {
 
-        filterAndOrder.contains(ORDER_BY_DESC_DATE_UPDATED) ->{
+        filterAndOrder.contains(ORDER_BY_DESC_DATE_UPDATED) -> {
             return searchNotesOrderByDateDESC(
                 query = query,
-                page = page)
+                page = page
+            )
         }
 
-        filterAndOrder.contains(ORDER_BY_ASC_DATE_UPDATED) ->{
+        filterAndOrder.contains(ORDER_BY_ASC_DATE_UPDATED) -> {
             return searchNotesOrderByDateASC(
                 query = query,
-                page = page)
+                page = page
+            )
         }
 
-        filterAndOrder.contains(ORDER_BY_DESC_TITLE) ->{
+        filterAndOrder.contains(ORDER_BY_DESC_TITLE) -> {
             return searchNotesOrderByTitleDESC(
                 query = query,
-                page = page)
+                page = page
+            )
         }
 
-        filterAndOrder.contains(ORDER_BY_ASC_TITLE) ->{
+        filterAndOrder.contains(ORDER_BY_ASC_TITLE) -> {
             return searchNotesOrderByTitleASC(
                 query = query,
-                page = page)
+                page = page
+            )
         }
         else ->
             return searchNotesOrderByDateDESC(

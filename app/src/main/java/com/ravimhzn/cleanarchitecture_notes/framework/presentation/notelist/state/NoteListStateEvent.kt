@@ -1,8 +1,8 @@
 package com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state
 
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.StateEvent
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.StateMessage
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.state.StateEvent
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.state.StateMessage
 
 sealed class NoteListStateEvent : StateEvent {
 

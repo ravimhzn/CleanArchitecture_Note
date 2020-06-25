@@ -5,9 +5,9 @@ import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.Note
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.abstraction.NoteNetworkDataSource
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.util.safeApiCall
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.util.safeCacheCall
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.*
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.NoteFactory
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.state.*
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.NoteFactory
 import com.ravimhzn.cleanarchitecture_notes.framework.presentation.notelist.state.NoteListViewState
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.Flow

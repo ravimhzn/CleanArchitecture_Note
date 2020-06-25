@@ -1,7 +1,7 @@
 package com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.mappers
 
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.util.EntityMapper
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.util.EntityMapper
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.model.NoteCacheEntity
 import javax.inject.Inject
 

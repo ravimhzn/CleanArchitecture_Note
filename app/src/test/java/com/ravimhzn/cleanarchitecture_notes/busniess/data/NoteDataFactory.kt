@@ -1,7 +1,8 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.domain.model
+package com.ravimhzn.cleanarchitecture_notes.busniess.data
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
 
 class NoteDataFactory(
     private val testClassLoader: ClassLoader

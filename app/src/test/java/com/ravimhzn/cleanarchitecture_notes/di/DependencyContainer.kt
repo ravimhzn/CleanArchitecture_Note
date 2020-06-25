@@ -1,13 +1,13 @@
 package com.ravimhzn.cleanarchitecture_notes.di
 
+import com.ravimhzn.cleanarchitecture_notes.busniess.data.NoteDataFactory
+import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.FakeNoteCacheDataSourceImpl
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.abstraction.NoteCacheDataSource
-import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.abstraction.NoteNetworkDataSource
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.NoteDataFactory
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.NoteFactory
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.util.DateUtil
-import com.ravimhzn.cleanarchitecture_notes.busniess.interactors_use_cases.notelist.data.cache.FakeNoteCacheDataSourceImpl
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.FakeNoteNetworkDataSourceImpl
+import com.ravimhzn.cleanarchitecture_notes.busniess.data.network.abstraction.NoteNetworkDataSource
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.NoteFactory
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.util.DateUtil
 import com.ravimhzn.cleanarchitecture_notes.utils.isUnitTest
 import java.text.SimpleDateFormat
 import java.util.*
@@ -21,7 +21,7 @@ class DependencyContainer {
     lateinit var noteNetworkDataSource: NoteNetworkDataSource
     lateinit var noteCacheDataSource: NoteCacheDataSource
     lateinit var noteFactory: NoteFactory
-    lateinit var noteDateFactory: NoteDataFactory
+    lateinit var noteDataFactory: NoteDataFactory
     private var notesData: HashMap<String, Note> = HashMap() // To avoid null-pointer
 
     init {
@@ -30,11 +30,11 @@ class DependencyContainer {
 
     fun build() {
         this.javaClass.classLoader?.let { classLoader ->
-            noteDateFactory = NoteDataFactory(classLoader)
+            noteDataFactory = NoteDataFactory(classLoader)
 
             //fake data set
-            notesData = noteDateFactory.produceHashMapOfNotes(
-                noteDateFactory.produceListOfNotes()
+            notesData = noteDataFactory.produceHashMapOfNotes(
+                noteDataFactory.produceListOfNotes()
             )
         }
 

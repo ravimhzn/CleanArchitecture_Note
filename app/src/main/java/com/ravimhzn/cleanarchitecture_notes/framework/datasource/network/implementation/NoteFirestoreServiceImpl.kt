@@ -3,7 +3,7 @@ package com.ravimhzn.cleanarchitecture_notes.framework.datasource.network.implem
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.network.abstraction.NoteFirestoreService
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.network.mapper.NetworkMapper
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.network.model.NoteNetworkEntity
@@ -13,7 +13,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class NoteFireStoreServiceImpl @Inject constructor(
+class NoteFirestoreServiceImpl @Inject constructor(
     private val firebaseAuth: FirebaseAuth,
     private val firestore: FirebaseFirestore,
     private val networkMapper: NetworkMapper

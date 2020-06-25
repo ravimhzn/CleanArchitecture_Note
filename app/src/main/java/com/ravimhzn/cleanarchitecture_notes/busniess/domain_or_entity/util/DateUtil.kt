@@ -1,4 +1,4 @@
-package com.ravimhzn.cleanarchitecture_notes.busniess.domain.util
+package com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.util
 
 import com.google.firebase.Timestamp
 import java.text.SimpleDateFormat

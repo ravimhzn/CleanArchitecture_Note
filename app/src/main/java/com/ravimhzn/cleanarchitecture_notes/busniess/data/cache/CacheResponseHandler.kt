@@ -1,7 +1,7 @@
 package com.ravimhzn.cleanarchitecture_notes.busniess.data.cache
 
 import com.ravimhzn.cleanarchitecture_notes.busniess.data.cache.CacheErrors.CACHE_DATA_NULL
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.state.*
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.state.*
 
 abstract class CacheResponseHandler<ViewState, Data>(
     private val response: CacheResult<Data?>,

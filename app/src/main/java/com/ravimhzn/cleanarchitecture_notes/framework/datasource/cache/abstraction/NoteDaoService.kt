@@ -1,6 +1,6 @@
 package com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.abstraction
 
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
 import com.ravimhzn.cleanarchitecture_notes.framework.datasource.cache.database.NOTE_PAGINATION_PAGE_SIZE
 
 interface NoteDaoService {
@@ -10,13 +10,15 @@ interface NoteDaoService {
 
     suspend fun searchNoteById(primaryKey: String): Note?
 
-    suspend fun updateNote(primary: String, newTitle: String, newBody: String?): Int
+    suspend fun updateNote(primary: String, newTitle: String, newBody: String?, timestamp: String?): Int
 
     suspend fun deleteNote(primaryKey: String): Int
 
     suspend fun deleteNotes(note: List<Note>): Int
 
     suspend fun searchNotes(): List<Note>
+
+    suspend fun getAllNotes(): List<Note>
 
     suspend fun searchNotesOrderByDateDESC(
         query: String,

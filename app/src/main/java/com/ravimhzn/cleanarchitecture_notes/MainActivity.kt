@@ -1,14 +1,24 @@
 package com.ravimhzn.cleanarchitecture_notes
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.crashlytics.FirebaseCrashlytics
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.ravimhzn.cleanarchitecture_notes.framework.presentation.BaseApplication
+import com.ravimhzn.cleanarchitecture_notes.utils.printLogD
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
+    private val TAG = "AppDebug ->"
+
+    @Inject
+    lateinit var firebaseAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        (application as BaseApplication).appComponent.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        FirebaseCrashlytics.getInstance().log("This is a crash test")
+
+        printLogD("MainActivity", "FirebaseAuth : ${firebaseAuth}")
     }
 }

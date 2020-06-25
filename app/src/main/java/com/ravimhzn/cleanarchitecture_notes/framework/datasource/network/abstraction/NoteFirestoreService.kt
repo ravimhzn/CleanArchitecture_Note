@@ -1,6 +1,6 @@
 package com.ravimhzn.cleanarchitecture_notes.framework.datasource.network.abstraction
 
-import com.ravimhzn.cleanarchitecture_notes.busniess.domain.model.Note
+import com.ravimhzn.cleanarchitecture_notes.busniess.domain_or_entity.model.Note
 
 interface NoteFirestoreService {
     suspend fun insertOrUpdateNote(note: Note)
